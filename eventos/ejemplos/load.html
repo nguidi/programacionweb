@@ -9,14 +9,36 @@
 		<a href="https://www.google.com.ar/">Ir a Google!</a>
 	</body>
 	<script>
+		/*
+			En el ejemplo, vemos en funcionamiento los eventos "load"
+			y "beforeunload".
+
+			El evento load es disparado una vez que el navegador termina
+			de cargar la pagina. Muy util si se quiere realizar una tarea
+			la cual dependa de que todo el sitio se encuentre cargado.
+
+			El evento beforeunload es disparado cuando se intenta cerrar
+			o salir de la pagina. Muy util para evitar que el usuario
+			pierda informacion al cerrar el sitio.
+		*/
+
+		//	Creo una variable llamada para y le asigno un parrafo
 		var para = document.querySelector("p");
 		
+		//	Escucho que se dispare el evento load
 		addEventListener("load", function (event) {
+
+			//	Inserto dentro del parrafo un contenido
 			para.innerHTML = 'Contenido que se carga al cargar todo el HTML...'
+		
 		});
     
+    	//	Escucho que se dispare el evento beforeunload
 		addEventListener("beforeunload", function (event) {
+
+			//	Muestro una alerta avisando sobre posible perdida de informacion.
 			event.returnValue = "Se va a perder todo lo que hiciste!!"
+
 		});
 	</script>
 </html>

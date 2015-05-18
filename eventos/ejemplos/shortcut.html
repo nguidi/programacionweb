@@ -8,10 +8,30 @@
 		<p>Presione Control + Space para continuar.</p>
 	</body>
 	<script>
+		/*
+			En el ejemplo, esperamos que se presionen las teclas Control
+			y Espacio de forma simultanea. Para esto  Hacemos uso de los
+			atajos del teclado.
+
+			Podemos determinar si las teclas  Control, el Alt y el Shift
+			se encuentra presionada mediante las propiedades ctrlKey,
+			altKey y shiftKey respectivamente. Estas propiedades estan
+			definidas en el EventObject asociado al evento y pueden tener
+			dos posibles valores. Si su valor es true entonces se cumple
+			que la tecla se encuentra presionada, en caso contrario su
+			valor sera false.
+		*/
+
+		//	Escuchamos que se dispare el evento "keydown"
 		addEventListener("keydown", function(event) {
-		
-		if (event.keyCode == 32 && event.ctrlKey)
-			console.log("Continuando!");
+			
+			/*
+				Valido que la tecla presionada sea el espacio y que se
+				encuentre presionado la tecla Control.
+			*/
+			if (event.keyCode == 32 && event.ctrlKey)
+				//	Imprimo un mensaje
+				console.log("Continuando!");
 		});
 	</script>
 </html>

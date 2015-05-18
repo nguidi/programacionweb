@@ -10,16 +10,38 @@
 		</div>
 	</body>
 	<script>
+		/*
+			Ejemplo donde se busca demostrar el efecto burbuja en los eventos
+			en donde primero escucha el elemento y luego sus antecesores
+
+			La forma de utilizarlo es pasando como tercer argumento de nuestra
+			funcion addEventListener un false (Este comportamiento ocurre por
+			defecto, es decir, que el valor por defecto del tercer argumento
+			es false).
+
+				nodo.addEventListener(evento, callback, false);
+		*/
+
+		//	Creo una variable par y le asigno el nodo que representa el parrafo
 		var par = document.querySelector("p");
-		
+
+		//	Creo una variable div y le asigno el nodo que representa el div 
 		var div = document.querySelector("div");
-  
+
+  		//	Escucho si ocurre el evento click sobre el parrafo y disparo el callback
 		par.addEventListener("click", function() {
+
+			//	Imprimo por consola un mensaje
 			console.log("Presionanste sobre el elemento p");
+
 		}, false);
-  
+
+  		//	Escucho si ocurre el evento click sobre el parrafo y disparo el callback
 		div.addEventListener("click", function() {
+
+			//	Imprimo por consola un mensaje
 			console.log("Presionanste sobre el elemento div");
+
 		}, false);
 	</script>
 </html>

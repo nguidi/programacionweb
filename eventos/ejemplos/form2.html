@@ -13,17 +13,43 @@
 		<p id="estado"><p>
 	</body>
 	<script>
+		/*
+			Ejemplo en donde se inserta contenido dentro de un parrafo
+			en el momento en el que se envia o resetea el formulario
+
+			El evento submit aplicado sobre un input es disparado cuando
+			el formulario es disparado.
+
+			El evento reset aplicado sobre un input es disparado cuando
+			el formulario es reseteado.
+		*/
+
+		//	Creo una variable llamada input y le asigno el nodo input
 		var input = document.querySelector("input");
 
+		//	Creo una variable llamada form y le asigno el nodo form
 		var form = document.querySelector("form");
 		
+		//	Escucho que se dispare el evento submit
 		form.addEventListener("submit", function(event) {
+
+			/*
+				Prevento el comportamiento por defecto del submit, el cual
+				consiste en realizar una peticion del tipo GET enviando los
+				los datos serializados del formuarlio.
+			*/
 			event.preventDefault()
+			//	Inserto contenido dentro del parrafo
 			document.getElementById("estado").innerHTML = "Formulario enviado...";
+		
 		});
 
+		//	Escucho que se dispare el evento reset
 		form.addEventListener("reset", function(event) {
+
+			//	Inserto contenido dentro del parrafo
 			document.getElementById("estado").innerHTML = "Formulario reseteado...";
+
 		});
 	</script>
 </html>

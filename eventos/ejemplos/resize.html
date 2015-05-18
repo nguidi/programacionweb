@@ -10,10 +10,27 @@
 		</p>
 	</body>
 	<script>
+		/*
+			En el ejemplo usamos el evento resize para informar a que
+			tamaño cambio la pantalla.
+
+			El evento resize asociado al BOD window es disparado una
+			vez que la pantalla cambia de tamaño.
+		*/
+
+		//	Escuchamos el evento resize
 		addEventListener("resize", function(event) {
+
+			//	Obtengo el ancho del BOD window.
 			var w = window.outerWidth;
+
+			//	Obtengo el alto de BOD window.
 			var h = window.outerHeight;
+
+			//	Creo una string con el ancho y alto de la pantalla.
 			var txt = "Tamaño de la pantalla: ancho=" + w + ", alto=" + h;
+			
+			//	Inserto dentro del parrafo con id estado el texto.
 			document.getElementById("estado").innerHTML = txt;
 		});
 	</script>

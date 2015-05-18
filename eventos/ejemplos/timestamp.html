@@ -8,10 +8,27 @@
 		<p></p>
 	</body>
 	<script>
+		/*
+			En el ejemplo, hacemos uso de la pripiedad timeStamp, definida
+			sobre el EventObject, para determinar el momento en el que se
+			disparo el evento.
+
+			La pripiedad timeStamp devuelve el tiempo en milisegundos desde
+			el pimero de enero de 1970 (una fecha de referencia llamada
+			"epoch"). Creamos una fecha a partir de la Clase Date pasandole
+			como argumento nuestro timeStamp.
+
+		*/
+
+		//	Creamos una variable llamada p la cual contiene un parrafo
 		var p = document.querySelector("p");
 		
+		//	Escuchamos que se dispare el evento click
 		addEventListener("click", function(event) {
+
+			//	Cambio el contenido del parrafo.
 			p.innerHTML = "Hice click en el momento - " + new Date(event.timeStamp);
+		
 		});
 	</script>
 </html>

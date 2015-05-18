@@ -8,18 +8,49 @@
 		<p>El sitio se pondrá de color azul si se presiona la letra V.</p>
 	</body>
 	<script>
+		/*
+			Ejemplo en donde se cambia el color del nodo body cuando se 
+			presiona la letra v.
+
+			Los eventos "keydown", "keyup" y "keypress" estan asociados
+			al teclado. El evento keydown se dispara cuando se unde la
+			tecla. El evento keyup cuando se suelta la tecla. Y el evento
+			keypress cuando la tecla se presiona.
+
+			Hacemos uso de la funcion String.fromCharCode la cual recibe
+			como argumento un numero que presenta el codigo ASCII de un 
+			caracter y lo convierte al respectivo caracter.
+
+			El codigo ASCII para la letra v es el numero 86. Por lo que
+			String.fromCharCode(86) devolvera "v".			
+		*/
+
+		//	Escuchamos que se dispare el evento keydown
 		addEventListener("keydown", function(event) {
+
+			//	Verifico que la propiedad keyCode del EventObject sea 86
 			if (event.keyCode == 86)
-			document.body.style.background = "blue";
+				//	Cambio el color de fondo del body al azul
+				document.body.style.background = "blue";
+
 		});
   
+  		//	Escuchamos que se dispare el evento keyup
 		addEventListener("keyup", function(event) {
+
+			//	Verifico que la propiedad keyCode del EventObject sea 86
 			if (event.keyCode == 86)
+				//	Cambio el color de fondo del body al blanco
 				document.body.style.background = "";
-			});
+		
+		});
   
+  		//	Escuchamos que se dispare el evento keypress
 		addEventListener("keypress", function(event) {
+
+			//	Imprimo por consola la letra que se presiono
 			console.log(String.fromCharCode(event.charCode));
+		
 		});
 	</script>
 </html>

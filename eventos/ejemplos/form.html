@@ -11,10 +11,24 @@
 		<p id="estado"></p>
 	</body>
 	<script>
+		/*
+			Ejemplo en donde se inserta contenido dentro de un parrafo
+			en el momento en el que se registra un cambio de un nodo
+			input.
+
+			El evento change aplicado a un input, indica cuando se
+			produce	un cambio en el valor del input.
+		*/
+
+		//	Creo una variable llamada input y le asigno el input
 		var input = document.querySelector("input");
 
+		//	Escucho que se dispare el evento change sobre el input
 		input.addEventListener("change", function(event) {
+
+			//	Edito el contenido del parrafo cuya id es estado.
 			document.getElementById("estado").innerHTML = "Nuevo valor: "+event.target.value;
+		
 		});
 	</script>
 </html>

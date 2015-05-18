@@ -4,14 +4,28 @@
 		<title> JS - EJ Mouse 5 </title>
 		<meta charset="UTF-8">
 		<style>
-			 div#padre {
+			/*
+				El div con ID padre tendra una distancia desde el top
+				de 50 px y un borde de color negro.
+			*/
+			div#padre {
 				padding-top: 50px;
 				border: 1px solid black;
 			}
+
+			/*
+				El div con ID azul tendra un alto de 50px y un fondo
+				de color azul.
+			*/
 			div#azul {
 				height: 50px;
 				background-color: blue;
 			}
+
+			/*
+				El div con ID verde tendra un alto de 50px y un fondo
+				de color verde.
+			*/
 			div#verde {
 				height: 50px;
 				background-color: green;
@@ -26,14 +40,34 @@
 		<p id="estado"></p>
 	</body>
 	<script>
+		/*
+			El ejemplo demuestra el funcionamiento de los eventos
+			mouseenter y mouseleave asociados a nodos.
+
+			El evento mouseenter es disparado caundo el mouse se posiciona
+			sobre un nodo HTML.
+
+			El evento mouseleave es disparado cuando el mouse abandona un
+			elemento HTML.
+		*/
+
+		//	Creamos una variable llamada div y le asignamos el div con id padre
 		var div = document.getElementById("padre");
 		
+		//	Escuchamos el evento mouseover sobre el div con id padre
 		div.addEventListener("mouseover", function(event) {
+
+			//	Cambio el contenido del parrafo con id estado
 			document.getElementById("estado").innerHTML = "Estoy dentro de "+event.target.id;
+		
 		});
   
+  		//	Escuchamos el evento mouseout sobre el div con id padre
 		div.addEventListener("mouseout", function(event) {
+
+			//	Cambio el contenido del parrafo con id estado
 			document.getElementById("estado").innerHTML = "";
+		
 		});
 	</script>
 </html>

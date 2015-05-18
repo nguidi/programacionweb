@@ -10,18 +10,37 @@
 		</div>
 	</body>
 	<script>
-		var par = document.querySelector("p");
-		
-		var par = document.querySelector("p");
+		/*
+			Ejemplo donde se busca demostrar el efecto captura en los eventos
+			en donde primero escuchan los antecesores y por ultimo el elemento
+			donde sobre el cual se origino el evento.
 
+			La forma de utilizarlo es pasando como tercer argumento de nuestra
+			funcion addEventListener un true.
+
+				nodo.addEventListener(evento, callback, true);
+		*/
+
+		//	Creo una variable par y le asigno el nodo que representa el parrafo
+		var par = document.querySelector("p");
+		
+		//	Creo una variable div y le asigno el nodo que representa el div 
 		var div = document.querySelector("div");
-		
+
+		//	Escucho si ocurre el evento click sobre el parrafo y disparo el callback
 		par.addEventListener("click", function() {
+
+			//	Imprimo por consola un mensaje
 			console.log("Presionanste sobre el elemento p");
+
 		}, true);
-		
+
+		//	Escucho si ocurre el evento click sobre el parrafo y disparo el callback
 		div.addEventListener("click", function() {
+
+			//	Imprimo por consola un mensaje
 			console.log("Presionanste sobre el elemento div");
+
 		}, true);
 	</script>
 </html>

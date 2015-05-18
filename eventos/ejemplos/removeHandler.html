@@ -8,13 +8,33 @@
 		<button>Funciono solo una vez</button>
 	</body>
 	<script>
+		/*
+			En el ejemplo esperamos que se dispare un evento y luego
+			removemos el handler asociado al mismo para evitar que
+			se siga escuchando.
+		
+				nodo.removeEventListener(event, callback[,capture])
+
+			Pasamos como callback de nuestro handler una funcion que
+			removera el handler. De esta manera nos aseguramos que se
+			ejecute una unica vez.
+		*/
+
+		//	Creo una variable llamada button y le asigno el boton.
 		var button = document.querySelector("button");
 		
+		//	Defino una funcion llamada once.
 		function once() {
+
+			//	Imprimo un mensaje
 			console.log("Listo.");
+			
+			//	Remuevo el handler del click asociado al boton
 			button.removeEventListener("click", once);
 		}
 
+		//	Asocio el handler del evento click al boton	
 		button.addEventListener("click", once);
+		
 	</script>
 </html>

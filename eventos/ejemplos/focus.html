@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> JS - EJ Focus </title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<input type="text">
+	</body>
+	<script>
+		/*
+			Ejemplo en donde se manipula propiedades de un nodo input
+			segun los eventos focus y blur.
+
+			El evento focus aplicado sobre un input, indica que se le
+			esta haciendo foco al input en cuestion. Analogamente, el
+			evento blur, indica cuando pierde el foco el input.
+		*/
+
+		//	Creo una variable input y le asigno el elemento input
+		var input = document.querySelector("input");
+	
+		//	Escucho si se dispara el evento focus sobre el input
+		input.addEventListener("focus", function(event) {
+
+			//	Cambio el color de fondo del input a amarillo
+			input.style.background = "yellow";
+		
+		});
+		
+		//	Escucho si se dispara el evento blur sobre el input
+		input.addEventListener("blur", function(event) {
+
+			//	Cambio el color de fondo del input a blanco
+			input.style.background = "white";
+		
+		});
+		
+	</script>
+</html>

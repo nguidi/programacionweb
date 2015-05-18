@@ -8,16 +8,47 @@
 		<p>Un párrafo que contiene un <button>Botón</button>.</p>
 	</body>
 	<script>
+		/*
+			El ejemplo hace uso de la funcion stopPropagation definida
+			en el EventObject para detener la propagacion del evento
+			al resto de los elementos antecesores.
+
+				EventObject.preventDefault();
+
+			El evento mousedown se dispara cuando se unde un boton del
+			mouse, su EventObject tiene asociadauna propiedad llamada
+			witch que determina que boton se presiono, en donde:
+
+				Valor	Boton
+				1		Izquierdo
+				2		Central
+				3		Derecho
+
+			En el ejemplo, dejamos solo evitamos la propagacion si el
+			boton presionado es el derecho.
+		*/
+
+		//	Creo una variable llamada para y le asigno un nodo p.
 		var para = document.querySelector("p");
 
+		//	creo una variable llamada button y le asigno el boton.
 		var button = document.querySelector("button");
 
+		//	Escuchamos que se dispare el evento mousedown sobre el p.
 		para.addEventListener("mousedown", function() {
+
+			//	Imprimo un mensaje
 			console.log("Handler para el párrafo.");
+
 		});
   
+  		//	Escuchamos que se dispare el evento mousedown sobre el boton.
 		button.addEventListener("mousedown", function(event) {
+
+			//	Imprimo un mensaje
 			console.log("Handler para el boton.");
+
+			//	Si el boton es el derecho detengo la propagacion del evento.
 			if (event.which == 3)
 				event.stopPropagation();
 		});

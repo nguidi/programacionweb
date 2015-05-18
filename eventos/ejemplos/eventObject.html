@@ -8,19 +8,43 @@
 		<button>Apretame como gustes.</button>
 	</body>
 	<script>
+		/*
+			El EventObject es el objeto que se pasa como argumento de
+			la funcion callback del Handler. Este objeto contiene
+			informacion que describe el evento.
+
+			Ejemplo de utilizacion de las propiedades del EventObject
+			que se crea a partir del evento "mousedown". En este caso
+			utilizamos la propiedad which para determinar que boton del
+			mouse fue presionado.
+
+				eventObject.which
+		*/
+
+		//	Creo una variable button y le asigno el nodo boton.
 		var button = document.querySelector("button");
 
+		//	Escucho si se dispara el evento mousedown sobre el boton
 		button.addEventListener("mousedown", function(event) {
+
+			//	Comparo el valor de la propiedad which del EventObject
 			switch(event.which) {
+
+				//	En caso de que valga 1 indico que es el boton izquierdo
 				case 1:
 					console.log("Botón izquierdo del mouse");
 					break;
+
+				//	En caso de que valga 2 indico que es el boton central
 				case 2:
 					console.log("Botón central del mouse");
 					break;
+
+				//	En caso de que valga 3 indico que es el boton derecho
 				case 3:
 					console.log("Botón derecho del mouse");
-					break;					
+					break;
+			
 			}
 		});
 	</script>

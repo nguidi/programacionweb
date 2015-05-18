@@ -10,9 +10,26 @@
 		<button>C</button>
 	</body>
 	<script>
+		/*
+			En el ejemplo se busca determinar que boton se apreto. El
+			handler es asociado al body el cual incluye los botones.
+
+			Podemos lograr esto haciendo uso de la propiedad Target 
+			definida sobre el EventObject del evento click. Esta
+			propiedad esta definida para todos los eventos e indica
+			el elemento en el cual se origino el evento.
+
+			El evento click es disparado cuando se realiza un click. 
+		*/
+
+		//	Escuchamos el evento click en todo el body
 		document.body.addEventListener("click", function(event) {
+
+			//	Si el tag del elemento apretado coincide con BUTTON
 			if (event.target.nodeName == "BUTTON")
+				//	Imprimo un mensaje
 				console.log("Aprete", event.target.textContent);
+		
 		});
 	</script>
 </html>

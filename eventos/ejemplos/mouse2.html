@@ -4,10 +4,18 @@
 		<title> JS - EJ Mouse 2 </title>
 		<meta charset="UTF-8">
 		<style>
+			/*
+				Le pongo un fondo al body para distinguirlo.
+			*/
 			body {
 				background: beige;
 			}
 			
+			/*
+				Creo la clase "dot" la cual representara un punto de
+				color azul, redondo, de radio 4px y cuya posicion
+				sera absoluta.
+			*/
 			.dot {
 				height: 8px; width: 8px;
 				border-radius: 4px;
@@ -19,15 +27,38 @@
 	<body>
 	</body>
 	<script>
+		/*
+			En el ejmplo, se busca crear puntos en la pantalla mediante
+			el uso del evento click.
+
+			Las propiedades pageX y pageY del EventObject asociado al
+			evento click indican la posicion en el eje x e y en la cual
+			se hizo click, es decir, la posicion en donde se encontraba
+			el puntero al momento de dispararse el evento.
+		*/
+
+		//	Escucho que se haga click
 		addEventListener("click", function(event) {
+
+			//	Creo un nodo del tipo div y lo asigno a la variable dot
 			var dot = document.createElement("div");
 
+			//	Le agrego la clase "dot" al div creado
 			dot.className = "dot";
 
+			/*
+				Le agrego un posicionamiento del tipo left cuyo valor
+				depende de la posicion en el eje x donde se hizo click
+			*/
 			dot.style.left = (event.pageX - 4) + "px";
 
+			/*
+				Le agrego un posicionamiento del tipo top cuyo valor
+				depende de la posicion en el eje y donde se hizo click
+			*/
 			dot.style.top = (event.pageY - 4) + "px";
 
+			//	Inserto el div dentro del nodo body
 			document.body.appendChild(dot);
 		});
 	</script>

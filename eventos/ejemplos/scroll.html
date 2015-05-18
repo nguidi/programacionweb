@@ -4,17 +4,34 @@
 		<title> JS - EJ Scroll </title>
 		<meta charset="UTF-8">
 		<style>
+			/*
+				Defino una clase "progress" que define el progreso
+				del scroll. Tiene un borde y un ancho fijo. Su
+				posicionamiento es fijo y esta separado 10px del
+				la parte superior y 10 px de la parte derecha. 
+			*/
 			.progress {
 				border: 1px solid blue;
 				width: 100px;
 				position: fixed;
-				top: 10px; right: 10px;
+				top: 10px;
+				right: 10px;
 			}
+
+			/*
+				Tomo el div que se encuentra dentro de aquel que
+				tenga clase "progress" y le fijo un alto, un ancho
+				y un fondo de color azul.
+			*/
 			.progress > div {
 				height: 12px;
 				background: blue;
 				width: 0%;
 			}
+
+			/*
+				Fijo el alto del body a 2000px.
+			*/
 			body {
 				height: 2000px;
 			}
@@ -27,11 +44,34 @@
 		<p>Scrolleame...</p>
 	</body>
 	<script>
+		/*
+			En el ejemplo, hacemos uso del scroll para mostrar una barra
+			en la que se indica cuanto de nuestra pantalla recorrimos.
+
+			El evento scroll es disparado cuando el scroll cambia de
+			posicion.
+
+			Utilizamos las siguientes propiedades
+				scrollHeight > devuelve el alto del scroll
+				innerHeight	 > devuelve el alto interno de la pantalla
+				pageYOffset	 > devuelve la distancia en Y scrolleada 
+
+			La propi
+		*/
+
+		//	Creo una variablle llamada bar y le asigno un div
 		var bar = document.querySelector(".progress div");
 		
+		//	Escucho si el scroll cambia de posicion.
 		addEventListener("scroll", function() {
+
+			//	Calculo el espacio sin scroll (sobre y por debajo)
 			var max = document.body.scrollHeight - innerHeight;
+
+			//	Calculo el porcentaje scrolleado
 			var percent = (pageYOffset / max) * 100;
+
+			//	Cambio el ancho del div segun el porcentaje
 			bar.style.width = percent + "%";
 		});
 	</script>

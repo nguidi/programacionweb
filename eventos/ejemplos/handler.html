@@ -9,10 +9,25 @@
 		<p>Si aprietan acá no pasa nada</p>
 	</body>
 	<script>
+		/*
+			Ejemplo en donde se utiliza el handler para detectar el
+			momento en el que se hace click sobre un boton.
+
+			El evento click es disparado cuando se hace click sobre
+			un nodo.
+
+				nodo.addEventListener(evento, callback[,capture])
+		*/
+
+		//	Creo una variablle llamada button y le asigno el nodo button
 		var button = document.querySelector("button");
 
+		//	Escucho que se haga click sobre el boton
 		button.addEventListener("click", function() {
+
+			//	Imprimo un mensaje
 			console.log("Clickeaste sobre el boton.");
+		
 		});
 	</script>
 </html>

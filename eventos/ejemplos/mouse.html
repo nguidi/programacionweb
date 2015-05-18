@@ -9,18 +9,43 @@
 		<button>Apretame</button>
 	</body>
 	<script>
+		/*
+			En el ejemplo mostramos en que secuencia son disparados los
+			eventos relacionados con el mouse.
+
+			El evento "mouseup" es disparado mientras se libera el boton.
+
+			El evento "mousedown" es dispardo mientras se presiona el boton.
+
+			El evento "click" es disparado cuando se suelta el boton.
+
+		*/
+
+		//	Creo una variable button y le asigno el boton.
 		var button = document.querySelector("button");
 
+		//	Escucho el evento mouseup sobre el boton
 		button.addEventListener("mouseup", function(event) {
+
+			//	Imprimo un mensaje
 			console.log("Segundo ocurre el evento mouseup");
+	
 		});
 		
+		//	Escucho el evento mousedown sobre el boton
 		button.addEventListener("mousedown", function(event) {
+
+			//	Imprimo un mensaje
 			console.log("Primero ocurre el evento mousedown");
+		
 		});
 
+		//	Escucho el evento click sobre el boton
 		button.addEventListener("click", function(event) {
+
+			//	Imprimo un mensaje
 			console.log("Y por ultimo ocurre el evento click");
+
 		});
 	</script>
 </html>

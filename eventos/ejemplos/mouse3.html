@@ -4,6 +4,7 @@
 		<title> JS - EJ Mouse 3 </title>
 		<meta charset="UTF-8">
 		<style>
+			/*	Le fijo un alto y un acho al div. Luego le agrego un borde */
 			div {
 				width: 200px;
 				height: 100px;
@@ -17,12 +18,23 @@
 		<p id="coordenadas"></p>
 	</body>
 	<script>
+		/*
+			En el ejemplo, detecto el movimiento del mouse dentro de nodo un div
+			y muestro en un parrafo la posicion del puntero dentro de dicho div.
+		*/
+
+		//	Creo una variable llamada div y le asigno el nodo div
 		var div = document.querySelector("div");
 		
+		//	Escucho el evento mousemove dentro del nodo div.
 		div.addEventListener("mousemove", function(event) {
+
+			//	Creo un string en el cual mostrare las coordenadas
 			var coor = "Coordenadas: (" + event.clientX + "," + event.clientY + ")";
 		
+			//	Inserto las coordenadas dentro del parrafo cuya id es coordenadas
 			document.getElementById("coordenadas").innerHTML = coor;
+		
 		});
 	</script>
 </html>

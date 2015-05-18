@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> JS - EJ Resize </title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<p id="estado">
+			Cambie el tamaño de la pantalla
+		</p>
+	</body>
+	<script>
+		addEventListener("resize", function(event) {
+			var w = window.outerWidth;
+			var h = window.outerHeight;
+			var txt = "Tamaño de la pantalla: ancho=" + w + ", alto=" + h;
+			document.getElementById("estado").innerHTML = txt;
+		});
+	</script>
+</html>

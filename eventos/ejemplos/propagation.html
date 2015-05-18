@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> JS - EJ Propagation </title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<p>Un párrafo que contiene un <button>Botón</button>.</p>
+	</body>
+	<script>
+		var para = document.querySelector("p");
+
+		var button = document.querySelector("button");
+
+		para.addEventListener("mousedown", function() {
+			console.log("Handler para el párrafo.");
+		});
+  
+		button.addEventListener("mousedown", function(event) {
+			console.log("Handler para el boton.");
+			if (event.which == 3)
+				event.stopPropagation();
+		});
+	</script>
+</html>

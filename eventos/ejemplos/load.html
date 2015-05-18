@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> JS - EJ Load </title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<p></p>
+		<a href="https://www.google.com.ar/">Ir a Google!</a>
+	</body>
+	<script>
+		var para = document.querySelector("p");
+		
+		addEventListener("load", function (event) {
+			para.innerHTML = 'Contenido que se carga al cargar todo el HTML...'
+		});
+    
+		addEventListener("beforeunload", function (event) {
+			event.returnValue = "Se va a perder todo lo que hiciste!!"
+		});
+	</script>
+</html>

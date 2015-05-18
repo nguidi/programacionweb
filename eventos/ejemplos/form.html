@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> JS - EJ Form </title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<form>
+			<input type="text"></div>
+		</form>
+		<p id="estado"></p>
+	</body>
+	<script>
+		var input = document.querySelector("input");
+
+		input.addEventListener("change", function(event) {
+			document.getElementById("estado").innerHTML = "Nuevo valor: "+event.target.value;
+		});
+	</script>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Grilla Loca</title>
+		<style type="text/css">
+			body {
+				margin: 0;
+				padding: 0;
+			}
+
+			.grilla {
+				width: 100%;
+				margin: 0;
+				padding: 0;
+			}
+
+			[class*=col-] {
+				float: left;
+				margin: 0 1%;
+			}
+
+			[class*=col-]:first-child {
+				margin-left: 0;
+			}
+
+			[class*=col-]:last-child {
+				margin-right: 0;
+			}
+
+			.col-1-12 {
+				width: 6,5%;
+			}
+
+			.col-4-12 {
+				width: 32%;
+			}
+
+			.col-6-12 {
+				width: 49%;
+			}
+
+			@media (max-width: 720px){
+
+				[class*=mob-col-] {
+					float: left;
+					margin: 0 0.5%;
+				}
+
+				[class*=mob-col-]:first-child {
+					margin-left: 0;
+				}
+
+				[class*=mob-col-]:last-child {
+					margin-right: 0;
+				}
+
+				.mob-col-6-12 {
+					width: 49.5%;
+				}
+
+				.mob-col-12-12 {
+					margin: 0;
+					width: 100%;
+				}
+
+			}
+
+			/*
+				Para la demostración
+			*/
+			div {
+				min-height: 500px;
+			}
+
+			.verde {
+				background-color: green;
+			}
+
+			.azul {
+				background-color: blue;
+			}
+
+			.rojo {
+				background-color: red;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="grilla verde">
+			<div class="col-4-12 mob-col-12-12 azul"></div>
+			<div class="col-4-12 mob-col-12-12 azul"></div>
+			<div class="col-4-12 mob-col-12-12 azul">
+				<div class="grilla">
+					<div class="col-6-12 mob-col-6-12 rojo"></div>
+					<div class="col-6-12 mob-col-6-12 rojo"></div>
+				</div>
+			</div>
+		</div>
+	</body>	
+</html>

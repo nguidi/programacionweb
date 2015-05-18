@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> JS - EJ Efecto Capturador </title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<div>
+			<p>Apreta aqui, tengo efecto captura.</p>
+		</div>
+	</body>
+	<script>
+		var par = document.querySelector("p");
+		
+		var par = document.querySelector("p");
+
+		var div = document.querySelector("div");
+		
+		par.addEventListener("click", function() {
+			console.log("Presionanste sobre el elemento p");
+		}, true);
+		
+		div.addEventListener("click", function() {
+			console.log("Presionanste sobre el elemento div");
+		}, true);
+	</script>
+</html>

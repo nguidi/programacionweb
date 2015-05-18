@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+	<html class="sl-root decks export loaded ua-phantomjs reveal-viewport theme-font-montserrat theme-color-grey-blue">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>4. JavaScript - Eventos: Slides</title>
+		<meta name="description" content="Slides">
+		<link rel="stylesheet" type="text/css" href="../theme.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-id="36767264e9dee8fda42aa271ded924e1"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; height: auto;" data-block-id="fba23517d5bb2edf78c37b1465883a8f"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="color: rgb(255, 255, 255); z-index: 11;">
+<h1>JavaScript</h1>
+
+<p>Eventos</p>
+</div></div></section><section data-id="b4da0c2be75eb4f56a0c6f5344a49ad4"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; height: auto;" data-block-id="a22be63fb88fc53093fee3a953003ea7"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>¿Que es?</h2>
+
+<h2> </h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 350px; height: auto;" data-block-id="2933d54b6a219b2e067a2effdf5913b0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p style="text-align:left">    </p>
+
+<ul>
+	<li>Presionar una tecla</li>
+	<li>Hacer click sobre un boton</li>
+	<li>Posicionar el mouse sobre un elemento HTML</li>
+	<li>Terminar de cargar el sitio</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 170px; height: auto;" data-block-id="10fb4c8e3f2c054aa7b3e2ee2881179f"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 13;">
+<p> </p>
+
+<p><span>Un evento es un "suceso" que le ocurre a nuestro código HTML y al cual podemos reaccionar.</span></p>
+</div></div></section><section data-id="af854928b273320948bbe9537ed57ea9"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; height: auto;" data-block-id="57b0b1e331a2d3379d58d7d8e4d77bdc"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h1>¿Como funciona?</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 100px; height: auto;" data-block-id="2fc04b725a1ea4730f5862fcd4124959"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle">
+<p> </p>
+
+<p>El navegador detecta las interacciones del usuario, así como también la carga de contenidos, y dispara eventos para que nosotros podamos escucharlo y reaccionar ante ellos.</p>
+</div></div></section><section data-id="fb9f2d146499a4048963741d8295391e"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 52px; height: auto;" data-block-id="ffec72d1099112ee41950b1661ed9aa3"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>¿Como los escuchamos?</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 263px; height: auto;" data-block-id="a3e74b4708346f25241543ca9c9db256"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 12;">
+<p> </p>
+
+<p>Para escucharlo hacemos uso de <em>"handlers" </em>que nos permiten tomar acciones a partir de un evento dado.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 500px; height: 157px; left: 240px; top: 432px;" data-block-id="c81f5f65f20bacd436ddcf1960cf3a20"><div class="sl-block-content" style="z-index: 13;"><pre><code>&lt;p&gt;Presione donde guste para activar el handler&lt;/p&gt;
+&lt;script&gt;
+  addEventListener("click", function() {
+    console.log("Clickeaste!");
+  });
+&lt;/script&gt;</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="1fffefe9804e62f4701a318a844ca959" style="height: auto; min-width: 30px; min-height: 30px; width: 227px; left: 368px; top: 601px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" data-has-custom-html="">
+<p><a href="ejemplos/listen.html" target="_blank">Ver Ejemplo</a></p>
+</div></div></section><section data-id="2a1a45655f49f50d5569b63b3dc8ad62"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 70px; height: auto;" data-block-id="c80b61c3ca12d3479d04cacbc821a80a"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>El Handler</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 210px; height: auto;" data-block-id="c40cde222de489c8689e420944b14e28"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11;">
+<p>Los Handlers pueden ser definidos en un elemento del DOM, de esta manera, escuchamos solamente cuando el evento ocurre en dicho elemento.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="7f6a08f12fc085026cf4782248bc1180" style="min-width: 30px; min-height: 30px; width: 500px; height: 193px; left: 231px; top: 387px;"><div class="sl-block-content" style="z-index: 12;"><pre><code>&lt;button&gt;Tócame&lt;/button&gt;
+&lt;p&gt;Si aprietan acá no pasa nada&lt;/p&gt;
+&lt;script&gt;
+  var button = document.querySelector("button");
+  button.addEventListener("click", function() {
+    console.log("Clickeaste sobre el boton.");
+  });
+&lt;/script&gt;</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 227px; left: 368px; top: 599px;" data-block-id="a58a94e32273fd08ad753cc1ec460b9c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" data-has-custom-html="">
+<a href="ejemplos/handler.html" target="_blank">Ver Ejemplo</a>
+</div></div></section><section data-id="e02efe7832fe760ab2ca53d00bd69f7b"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 167px; height: auto;" data-block-id="f16aadcabaf73529f913925e3168216a"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 10;">
+<p>Podemos remover un Handler una vez usado</p>
+
+<p>utilizando el método removeEventListener.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="0fa08832664bd1b278492a6dc3fef412" style="min-width: 30px; min-height: 30px; width: 500px; height: 211px; left: 230px; top: 369px;"><div class="sl-block-content" style="z-index: 11;"><pre><code>&lt;button&gt;Funciono solo una vez&lt;/button&gt;
+&lt;script&gt;
+  var button = document.querySelector("button");
+  function once() {
+    console.log("Listo.");
+    button.removeEventListener("click", once);
+  }
+  button.addEventListener("click", once);
+&lt;/script&gt;</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 227px; left: 367px; top: 601px;" data-block-id="6346d5dc739b076410428a804dcf0398"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-has-custom-html="">
+<p><a href="ejemplos/removeHandler.html" target="_blank">Ver Ejemplo</a></p>
+</div></div></section><section data-id="efdfc37ac21e3a583ecad8f8f73240b7"><div class="sl-block" data-block-type="text" style="width: 800px; left: 82px; top: 22px; height: auto;" data-block-id="2b005316028a144a3c2f52dad0684862"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Event Object</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 752px; left: 104px; top: 128px; height: auto;" data-block-id="75a53eeb5d2cb7f73ca7b8f664785d23"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11;">
+<p>Al callback de nuestro handler se <span style="color:rgb(255, 255, 255)">le </span><span style="color:rgb(255, 255, 255)">pasa como argumento el evento disparado.</span></p>
+
+<p>De esta manera obtenemos mas información respecto al evento.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="68ed68b42c866013c5641396133c0b35" style="min-width: 30px; min-height: 30px; width: 526px; height: 354px; left: 219px; top: 304px;"><div class="sl-block-content" style="z-index: 12;"><pre><code>&lt;button&gt;Apretame como gustes.&lt;/button&gt;
+&lt;script&gt;
+  var button = document.querySelector("button");
+  button.addEventListener("mousedown", function(event) {
+    switch(event.which) {
+	case 1:
+	    console.log("Botón izquierdo del mouse");
+	    break;
+	case 2:
+	    console.log("Botón central del mouse");
+	    break;
+	case 3:
+	    console.log("Botón derecho del mouse");
+	    break;					
+    }
+  });
+&lt;/script&gt;</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 227px; left: 368px; top: 652px;" data-block-id="49e2c4c6a2489c6a42cd5ad528731326"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" data-has-custom-html="">
+<p><a href="ejemplos/eventObject.html" target="_blank">Ver Ejemplo</a></p>
+</div></div></section><section data-id="9fc3debbeaf74b1605ee19d7005f2dca"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 43px; height: auto;" data-block-id="ea6939973dd227ff5c7b40e216c21c8f"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Target</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 182px; height: auto;" data-block-id="15c3401a775b1bcf7e2067413ffbd6f1"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11;">
+<p>Uno de los atributos principales del Event Object es el <em>target</em>, este define donde se origino el evento.</p>
+
+<p> </p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="5a80b36eaefb6a6f229762c8213e6ab8" style="min-width: 30px; min-height: 30px; width: 570px; height: 210px; left: 195px; top: 307px;"><div class="sl-block-content" style="z-index: 12;"><pre><code>&lt;button&gt;A&lt;/button&gt;
+&lt;button&gt;B&lt;/button&gt;
+&lt;button&gt;C&lt;/button&gt;
+&lt;script&gt;
+  document.body.addEventListener("click", function(event) {
+    if (event.target.nodeName == "BUTTON")
+      console.log("Aprete", event.target.textContent);
+  });
+&lt;/script&gt;</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 227px; left: 367px; top: 571px;" data-block-id="9407ceebf845808e6fb05cab5b3f1b71"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" data-has-custom-html="">
+<p><a href="ejemplos/target.html" target="_blank">Ver Ejemplo</a></p>
+</div></div></section><section data-id="fe01d44c52f9cdcc3f688667de9269a6"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 43px; height: auto;" data-block-id="e9f7b57b088564e1e2974cca8d0f939c"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>TimeStamp</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 182px; height: auto;" data-block-id="13d9c09164eac5905ae97b79c899b927"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11;">
+<p>El atributo <em>timeStamp</em> del Event Object define en que momento temporal ocurrió el evento.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 714px; height: 210px; left: 124px; top: 327px;" data-block-id="d16afee1396c543947a7c073c01aa3c2"><div class="sl-block-content" style="z-index: 12;"><pre><code>&lt;p&gt;&lt;/p&gt;
+&lt;script&gt;
+  var p = document.querySelector("p");
+  addEventListener("click", function(event) {
+    p.innerHTML = "Hice click en el momento - " +new Date(event.timeStamp);
+  });
+&lt;/script&gt;</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 227px; left: 367px; top: 541px;" data-block-id="e6a142aac42983dec38c6335d357cfc6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" data-has-custom-html="">
+<p><a href="ejemplos/timestamp.html" target="_blank">Ver Ejemplo</a></p>
+</div></div></section><section data-id="1e3acb7f031273308b52ee723baa2b7d"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-block-id="076c7bf1d626a8f1cba793234d5cd080"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Propagación</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 154px; height: auto;" data-block-id="0db123c706676c1d9fec516bb1269307"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11;">
+<p>Cuando se dispara un evento desde un elemento HTML, todos los padres de ese elemento también escucharan el evento.</p>
+
+<p>La función <em>stopPropagation</em> definida sobre el Event Object detiene la propagación.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="bd9bf4c600bf3e336fccf630816c5933" style="min-width: 30px; min-height: 30px; width: 542px; height: 280px; left: 209px; top: 372px;"><div class="sl-block-content" style="z-index: 12;"><pre><code>&lt;p&gt;Un párrafo que contiene un &lt;button&gt;Botón&lt;/button&gt;.&lt;/p&gt;
+&lt;script&gt;
+  var para = document.querySelector("p");
+  var button = document.querySelector("button");
+  para.addEventListener("mousedown", function() {
+    console.log("Handler para el párrafo.");
+  });
+  button.addEventListener("mousedown", function(event) {
+    console.log("Handler para el boton.");
+    if (event.which == 3)
+      event.stopPropagation();
+  });
+&lt;/script&gt;</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 227px; left: 367px; top: 661px;" data-block-id="57adba92aa3a94e5735f6b37f6b8a02d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" data-has-custom-html="">
+<p><a href="ejemplos/propagation.html" target="_blank">Ver Ejemplo</a></p>
+</div></div></section><section data-id="91cde54c9371eb37a30b8bbdfed265e4"><div class="sl-block" data-block-type="text" style="width: 769px; left: 96px; top: 280px; height: auto;" data-block-id="a7dfd47a667f3413ba5a87b6cc9cba71"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 10; border-width: 1px;">
+<p>Al propagarse un evento, pueden ocurrir dos efectos.</p>
+
+<ol>
+	<li>Burbuja: Primero lo escucha el elemento y luego sus antecesores.</li>
+	<li>Capturador: Primero lo escucha sus antecesores y por ultimo el elemento.</li>
+</ol>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 102px; height: auto;" data-block-id="3c37a5f62c752444feefc4b41ee6a6e0"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Tipos de Propagación</h1>
+</div></div></section><section data-id="4a92ed4d66dd1d59c1af69c28c02a517"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 102px; height: auto;" data-block-id="f1d9d3e63e8a59fc327125f09eee927a"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 10;">
+<p>Para poder utilizar el efecto burbuja, tenemos que pasar como tercer argumento de nuestra función addEventListener el valor booleano <em>false</em>.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="340224b8c1bd37edd6e76b766f2b43dd" style="min-width: 30px; min-height: 30px; width: 600px; height: 300px; left: 230px; top: 248px;"><div class="sl-block-content" style="z-index: 11;"><pre><code>&lt;div&gt;
+  &lt;p&gt;Apreta aqui, tengo efecto burbuja.&lt;/p&gt;
+&lt;/div&gt;&lt;br&gt;
+&lt;script&gt;
+  var par = document.querySelector("p");
+  var div = document.querySelector("div");
+  par.addEventListener("click", function() {
+      console.log("Presionanste sobre el elemento p");
+  }, false);
+  div.addEventListener("click", function() {
+      console.log("Presionanste sobre el elemento div");
+  }, false);
+&lt;/script&gt;</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 227px; left: 367px; top: 548px;" data-block-id="0c9f318114811983f4248d0404d8fe39"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-has-custom-html="">
+<p><a href="ejemplos/bubbling.html" target="_blank">Ver Ejemplo</a></p>
+</div></div></section><section data-id="7a9dfff7f5541c824100b55bc3359c7e"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 102px; height: auto;" data-block-id="4371e9a0e5d9e6ec57bb275764ddaa24"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 10;">
+<p>Para poder utilizar el efecto captura, tenemos que pasar como tercer argumento de nuestra función addEventListener el valor booleano <em>true</em>.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 500px; height: 300px; left: 230px; top: 248px;" data-block-id="216592b5b2bb43dbe907e489be3ae51d"><div class="sl-block-content" style="z-index: 11;"><pre><code>&lt;div&gt;
+  &lt;p&gt;Apreta aqui, tengo efecto captura.&lt;/p&gt;
+&lt;/div&gt;&lt;br&gt;
+&lt;script&gt;
+  var par = document.querySelector("p");
+  var div = document.querySelector("div");
+  par.addEventListener("click", function() {
+      alert("Presionanste sobre el elemento p");
+  }, true);
+  div.addEventListener("click", function() {
+      alert("Presionanste sobre el elemento div");
+  }, true);
+&lt;/script&gt;</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 227px; left: 366px; top: 548px;" data-block-id="79b58b392e8bf619e5a9f4ac6cd0be1c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-has-custom-html="">
+<p><a href="ejemplos/capturing.html" target="_blank">Ver Ejemplo</a></p>
+</div></div></section><section data-id="17fcb1f7304464b9e6b13a0b88bff5bd"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 43px; height: auto;" data-block-id="dabcd566b74527710ce1459e90b72f36"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Default</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 181px; height: auto;" data-block-id="23992e9450178b45e796539600999f15"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11;">
+<p>Algunos elementos HTML tienen acciones por defecto cuando el usuario interacciona con ellos. Una forma de prevenir este comportamiento es utilizando la funcion <em>preventDefault</em> definida sobre el Event Object</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="1bb21703682ccd91bddd43a855dd9f47" style="min-width: 30px; min-height: 30px; width: 500px; height: 195px; left: 230px; top: 393px;"><div class="sl-block-content" style="z-index: 12;"><pre><code>&lt;a href="https://www.google.com.ar/"&gt;Ir a Google!&lt;/a&gt;
+&lt;script&gt;
+  var link = document.querySelector("a");
+  link.addEventListener("click", function(event) {
+    console.log("De acá no te vas.");
+    event.preventDefault();
+  });
+&lt;/script&gt;</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 227px; left: 367px; top: 625px;" data-block-id="c6525be693a991af754242a7bf888a8a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" data-has-custom-html="">
+<p><a href="ejemplos/default.html" target="_blank">Ver Ejemplo</a></p>
+</div></div></section><section data-id="9ca765a0740ef2888b1e8d21167f0bf3"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 0px; height: auto;" data-block-id="49006a415f20966fdb320d3f1cf3bd72"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Eventos del Teclado</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 109px; height: auto;" data-block-id="ae827508db59b731c79ec5fab850e5b2"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11; border-width: 1px;">
+<p>Cuando se presiona una tecla del teclado, el navegador dispara el evento <em>keydown</em> y cuando se la suelta dispara el evento <em>keyup.</em></p>
+
+<p>Un tercer evento llamado <em>keypress </em>es disparado si la tecla presionada genera algún carácter de entrada.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="6ad3704af25a705ab78b03d4046bc681" style="min-width: 30px; min-height: 30px; width: 650px; height: 301px; left: 155px; top: 340px;"><div class="sl-block-content" style="z-index: 12;"><pre><code>&lt;p&gt;El sitio se pondrá de color azul si se presiona la letra V.&lt;/p&gt;
+&lt;script&gt;
+  addEventListener("keydown", function(event) {
+    if (event.keyCode == 86)
+      document.body.style.background = "blue";
+  });
+  addEventListener("keyup", function(event) {
+    if (event.keyCode == 86)
+      document.body.style.background = "";
+  });
+  addEventListener("keypress", function(event) {
+    console.log(String.fromCharCode(event.charCode));
+  });
+&lt;/script&gt;</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 227px; left: 333px; top: 650px;" data-block-id="854d00ee02186381068f04eb7dc03422"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" data-has-custom-html="">
+<p><a href="ejemplos/keyboard.html" target="_blank">Ver Ejemplo</a></p>
+</div></div></section><section data-id="5c631ffc348ec5da113cbe8c44268ffa"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 43px; height: auto;" data-block-id="042a17f9ed5492b0bd96e255b0e1d7b6"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Atajos</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 180px; height: auto;" data-block-id="6289983f3ffd29daf95d7cf902e5ced3"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11; border-width: 1px;">
+<p>El Event Object contiene información de cuando las teclas <em>Control</em>, <em>Alt</em> y <em>Shift</em> están presionadas.</p>
+
+<p>Dicha información esta contenida en los atributos <em>ctrlKey</em>, <em>altKey</em> y <em>shiftKey </em>del Event Object<em> </em>respectivamente.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="e6c8ab48e28336b97ffbff43296110d5" style="min-width: 30px; min-height: 30px; width: 500px; height: 164px; left: 230px; top: 427px;"><div class="sl-block-content" style="z-index: 12;"><pre><code>&lt;p&gt;Presione Control + Space para continuar.&lt;/p&gt;
+&lt;script&gt;
+  addEventListener("keydown", function(event) {
+    if (event.keyCode == 32 &amp;&amp; event.ctrlKey)
+      console.log("Continuando!");
+  });
+&lt;/script&gt;</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 227px; left: 367px; top: 611px;" data-block-id="9ff91921170ffaccf79d96669fa224c4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" data-has-custom-html="">
+<p><a href="ejemplos/shortcut.html" target="_blank">Ver Ejemplo</a></p>
+</div></div></section><section data-id="3b9f3939fdaf8595222d0d0bec33d019"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 11px; height: auto;" data-block-id="dcd7af0a6f77e64cff171583fe141c7a"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Eventos del Mouse</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 123px; height: auto;" data-block-id="ccf4cfa39455ba261bda9ff3fd0f18f3"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11; border-width: 1px;">
+<p>Al presionar el botón izquierdo o central del mouse,</p>
+
+<p>el navegador dispara los siguientes eventos:</p>
+
+<ol>
+	<li>Un evento llamado <em>mousedown</em>.</li>
+	<li>Un evento llamado <em>mouseup</em><span style="color:rgb(255, 255, 255); text-align:left">.</span>
+</li>
+	<li>Un evento llamado <em>click.</em>
+</li>
+</ol>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 570px; height: 311px; left: 195px; top: 350px;" data-block-id="7c45cf5fc1412941825a2be688f390c0"><div class="sl-block-content" style="z-index: 12;"><pre><code>&lt;p&gt;Usa el botón central o izquierdo!&lt;/p&gt;
+&lt;button&gt;Apretame&lt;/button&gt;
+&lt;script&gt;
+  var button = document.querySelector("button");
+  button.addEventListener("mousedown", function(event) {
+    console.log("Primero ocurre el evento mousedown");
+  });
+  
+  button.addEventListener("mouseup", function(event) {
+    console.log("Segundo ocurre el evento mouseup");
+  });
+  button.addEventListener("click", function(event) {
+    console.log("Y por ultimo ocurre el evento click");
+  });
+&lt;/script&gt;</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 227px; left: 352px; top: 661px;" data-block-id="47201e1dadf2b8ac2321d7f34e5f9802"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" data-has-custom-html="">
+<p><a href="ejemplos/mouse.html" target="_blank">Ver Ejemplo</a></p>
+</div></div></section><section data-id="77bbfe32edbc2e0f5a8cbdcefec05ee5"><div class="sl-block" data-block-type="code" data-block-id="bc238f7f46f79efe7d87ce63f86a6d08" style="min-width: 30px; min-height: 30px; width: 589px; height: 440px; left: 186px; top: 200px;"><div class="sl-block-content" style="z-index: 11;"><pre><code>&lt;style&gt;
+  body {
+    height: 200px;
+    background: beige;
+  }
+  .dot {
+    height: 8px; width: 8px;
+    border-radius: 4px;
+    background: blue;
+    position: absolute;
+  }
+&lt;/style&gt;
+&lt;script&gt;
+  addEventListener("click", function(event) {
+    var dot = document.createElement("div");
+    dot.className = "dot";
+    dot.style.left = (event.pageX - 4) + "px";
+    dot.style.top = (event.pageY - 4) + "px";
+    document.body.appendChild(dot);
+  });
+&lt;/script&gt;</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 97px; height: auto;" data-block-id="f3b6e8e72ab0b6f1427ebef7642956a0"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 12; border-width: 1px;">
+<ul>
+	<li>pageX: Distancia desde la izquierda</li>
+	<li>pageY: Distancia desde arriba</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 227px; left: 367px; top: 640px;" data-block-id="b186f949b9e8715079b0edd069bedfda"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-has-custom-html="">
+<p><a href="ejemplos/mouse2.html" target="_blank">Ver Ejemplo</a></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="05fc0175160e2dfba52088e61ac842ba" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 8.43519781718963px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p>El Event Object de un evento del mouse trae las coordenadas que informan donde ocurrió el evento.</p>
+</div></div></section><section data-id="dc12bfa927afb3c5d1e7db4aacff2f5f"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 43px; height: auto;" data-block-id="06f6c82c437100dc2fb8419c6812c7b0"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Movimientos del Mouse</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 140px; height: auto;" data-block-id="b75f6fc3e20a46dfe8a36944b72df413"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 12; border-width: 1px;" data-has-custom-html=""><p>El evento <em>mousemove </em>es disparado cuando el mouse se mueve dentro de nuestro DOM.</p></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="9bf697f99dddc1a7af1ef282465a7b00" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 630px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-has-custom-html=""><p><a href="ejemplos/mouse3.html" target="_blank">Ver Ejemplo</a></p></div></div>
+<div class="sl-block" data-block-type="code" data-block-id="8296b457dc430d9601cdaa570da1a265" style="min-width: 30px; min-height: 30px; width: 720px; height: 375px; left: 120px; top: 233px;"><div class="sl-block-content" style="z-index: 14;"><pre><code>&lt;style&gt;
+  div {
+    width: 200px;
+    height: 100px;
+    border: 1px solid black;
+  }
+&lt;/style&gt;
+&lt;p&gt;Mueve el mouse dentro de este div!&lt;/p&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;p id="coordenadas"&gt;&lt;/p&gt;
+&lt;script&gt;
+  var div = document.querySelector("div");
+  div.addEventListener("mousemove", function(event) {
+    var coor = "Coordenadas: (" + event.clientX + "," + event.clientY + ")";
+    document.getElementById("coordenadas").innerHTML = coor;
+  });
+&lt;/script&gt;</code></pre></div></div></section><section data-id="2669594ad4c4464c2d01234d978e854b"><div class="sl-block" data-block-type="text" style="width: 830px; left: 65px; top: 0px; height: auto;" data-block-id="13b82d325b427541618877fd20f5139d"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 12; border-width: 1px;" data-has-custom-html="">
+<p>Los evento <em>mouseenter </em>y <em>mouseleave </em>son disparados cuando posicionamos nuestro puntero sobre un elemento HTML y cuando abandonamos el mismo respectivamente.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 181px; top: 661px;" data-block-id="e1ef6067f7ba7468ece12e3d07398248"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-has-custom-html=""><p><a href="ejemplos/mouse4.html" target="_blank">Ver Ejemplo</a></p></div></div>
+<div class="sl-block" data-block-type="code" data-block-id="d7388b1ab3bab1be2bf967ff3b3a40fe" style="min-width: 30px; min-height: 30px; width: 741px; height: 514px; left: 111px; top: 140px;"><div class="sl-block-content" style="z-index: 14; font-size: 90%;"><pre><code>&lt;style&gt;
+  div#padre {
+    padding-top: 50px;
+    border: 1px solid black;
+  }
+  div#azul {
+    height: 50px;
+    background-color: blue;
+  }
+  div#verde {
+    height: 50px;
+    background-color: green;
+  }
+&lt;/style&gt;
+&lt;div id="padre"&gt;
+  &lt;div id="azul"&gt;&lt;/div&gt;
+  &lt;div id="verde"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p id="estado"&gt;&lt;/p&gt;
+&lt;script&gt;
+  var div = document.getElementById("padre");
+  div.addEventListener("mouseenter", function(event) {
+    document.getElementById("estado").innerHTML = "Estoy dentro de "+event.target.id;
+  }, true);
+  div.addEventListener("mouseleave", function(event) {
+    document.getElementById("estado").innerHTML = "";
+  }, true);
+&lt;/script&gt;</code></pre></div></div></section><section data-id="7e00b806c1216bc6e6abfbe20625bab3"><div class="sl-block" data-block-type="text" style="width: 907px; left: 27px; top: 0px; height: auto;" data-block-id="e8c404e1850902519368f098738bbc14"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11; border-width: 1px;" data-has-custom-html="">
+<p>Los eventos <em>mouseover </em>y <em>mouseout </em>son disparados cuando posicionamos nuestro puntero sobre un elemento HTML o uno de sus hijos y cuando abandonamos el mismo respectivamente.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="340b4f5a59928f94eab253d9076c511a" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 638px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-has-custom-html=""><p><a href="ejemplos/mouse5.html" target="_blank">Ver Ejemplo</a></p></div></div>
+<div class="sl-block" data-block-type="code" data-block-id="b4603173807376e54943c0823ae359e7" style="min-width: 30px; min-height: 30px; width: 743px; height: 519px; left: 108px; top: 119px;"><div class="sl-block-content" style="z-index: 13; font-size: 90%;"><pre><code>&lt;style&gt;
+  div#padre {
+    padding-top: 50px;
+    border: 1px solid black;
+  }
+  div#azul {
+    height: 50px;
+    background-color: blue;
+  }
+  div#verde {
+    height: 50px;
+    background-color: green;
+  }
+&lt;/style&gt;
+&lt;div id="padre"&gt;
+  &lt;div id="azul"&gt;&lt;/div&gt;
+  &lt;div id="verde"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p id="estado"&gt;&lt;/p&gt;
+&lt;script&gt;
+  var div = document.getElementById("padre");
+  div.addEventListener("mouseover", function(event) {
+    document.getElementById("estado").innerHTML = "Estoy dentro de "+event.target.id;
+  });
+  div.addEventListener("mouseout", function(event) {
+    document.getElementById("estado").innerHTML = "";
+  });
+&lt;/script&gt;</code></pre></div></div></section><section data-id="00559862cfd8b8394a3ea90da485363e"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 43px; height: auto;" data-block-id="370b663b1402c3bcfe03eadf8207e408"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Eventos de formularios</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 907px; left: 28px; top: 204px; height: auto;" data-block-id="fcfe0cfae28a6d40e78e20e87117a7f8"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11; border-width: 1px;" data-has-custom-html="">
+<p>El evento <em>change </em>nos permite escuchar cuando el valor de un campo de un formulario cambio. Este evento es aplicable para campos del tipo input, select o textarea.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="c541179cd5001af05d6c14dace0a7f8f" style="min-width: 30px; min-height: 30px; width: 800px; height: 219px; left: 80px; top: 350px;"><div class="sl-block-content" style="z-index: 13;"><pre><code>&lt;form&gt;
+    &lt;input type="text"&gt;&lt;/div&gt;
+&lt;/form&gt;
+&lt;p id="estado"&gt;&lt;/p&gt;
+&lt;script&gt;
+  var input = document.querySelector("input");
+  input.addEventListener("change", function(event) {
+    document.getElementById("estado").innerHTML = "Nuevo valor: "+event.target.value;
+  });
+&lt;/script&gt;</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 584px;" data-block-id="f877e23acdd61f88079577db04ef53ad"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" data-has-custom-html=""><p><a href="ejemplos/form.html" target="_blank">Ver Ejemplo</a></p></div></div></section><section data-id="483286985dfe57c0a0df488f0b57919e"><div class="sl-block" data-block-type="text" style="width: 877px; left: 42px; top: 31px; height: auto;" data-block-id="4e8d1625320c5595825b1401d8876e3e"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11; border-width: 1px;">
+<p>Al intentar hacer foco  sobre un elemento HTML, el navegador dispara los siguientes eventos</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="64b50ac5e10e8866b6e085c02a387f44" style="min-width: 30px; min-height: 30px; width: 500px; height: 249px; left: 230px; top: 381px;"><div class="sl-block-content" style="z-index: 12;"><pre><code>&lt;input type="text"&gt;
+&lt;script&gt;
+  var input = document.querySelector("input");
+  input.addEventListener("focus", function(event) {
+    input.style.background = "yellow";
+  });
+  input.addEventListener("blur", function(event) {
+    input.style.background = "white";
+  });
+&lt;/script&gt;</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="63431afe9e67db1fc72e83cac1c9596f" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 304px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>Estos eventos NO se propagan.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 227px; left: 367px; top: 630px;" data-block-id="fa3946d9ce794f4dc91cc3da6ba6492c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" data-has-custom-html="">
+<p><a href="ejemplos/focus.html" target="_blank">Ver Ejemplo</a></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="a38bfdce48f58d2c704bd95fee119c46" style="height: auto; min-width: 30px; min-height: 30px; width: 760px; left: 111px; top: 132px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<ol>
+	<li>
+<em>focusin</em>, indica que se esta haciendo foco</li>
+	<li>
+<em>focus</em>, indica que ya se hizo foco</li>
+	<li>
+<em>focusout</em>, indica que se esta perdiendo el foco</li>
+	<li>
+<em>blur</em>, indica que ya se perdio el foco</li>
+</ol>
+</div></div></section><section data-id="6353c5af3dde0d7a3f8c08fc5106dcf9"><div class="sl-block" data-block-type="text" style="width: 712px; left: 124px; top: 46px; height: auto;" data-block-id="65cf5069abeb933b1166143b60370fb4"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 10; border-width: 1px;">
+<p>Cuando enviamos un formulario, el navegador dispara un evento llamado <em>submit</em>.</p>
+
+<p>Analogamente al intentar resetear un formulario, el navegador dispara el evento reset.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="81e2eaeaa9747fe38e5c9588c28afa23" style="min-width: 30px; min-height: 30px; width: 716px; height: 355px; left: 131px; top: 241px;"><div class="sl-block-content" style="z-index: 11;"><pre><code>&lt;form&gt;
+  Nombre: &lt;input type="text"&gt;
+  &lt;input type="reset"&gt;
+  &lt;input type="submit"&gt;
+&lt;/form&gt;
+&lt;p id="status"&gt;&lt;p&gt;
+&lt;script&gt;
+  var form = document.querySelector("form");
+  form.addEventListener("submit", function(event) {
+    event.preventDefault()
+    document.getElementById("status").innerHTML = "Formulario enviado...";
+  });
+  form.addEventListener("reset", function(event) {
+    document.getElementById("status").innerHTML = "Formulario reseteado...";
+  });
+&lt;/script&gt;</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 227px; left: 367px; top: 596px;" data-block-id="e636ac32eda5e614149a5a3827008617"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-has-custom-html="">
+<p><a href="ejemplos/form2.html" target="_blank">Ver Ejemplo</a></p>
+</div></div></section><section data-id="c470eac5b4157cc5e4bbb2ab5ca293aa"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 22px; height: auto;" data-block-id="6d2739e3f5749a137571f8226f55f51f"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Eventos del Frame</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 119px; height: auto;" data-block-id="87a137af1a5fd7d0d5a85bb35facf36b"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 12; border-width: 1px;">
+<p>Un evento especial, llamado <em>load </em>es disparado cuando nuestra pagina termina de cargar.</p>
+
+<p>Cuando cerramos la ventana o bien presionamos algún link que nos cambie el contenido, se dispara un evento llamado <span style="text-align:start"><em>beforeunload</em>.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 227px; left: 367px; top: 611px;" data-block-id="9a7732878c8421645736bc7bb6c3617f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-has-custom-html="">
+<p><a href="ejemplos/load.html" target="_blank">Ver Ejemplo</a></p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="2db534d5e673de6bb36c3b5fb3c21ae8" style="min-width: 30px; min-height: 30px; width: 720px; height: 242px; left: 120px; top: 369px;"><div class="sl-block-content" style="z-index: 14;"><pre><code>&lt;p&gt;&lt;/p&gt;
+&lt;a href="https://www.google.com.ar/"&gt;Ir a Google!&lt;/a&gt;
+&lt;script&gt;
+    var para = document.querySelector("p");
+    addEventListener("load", function (event) {
+        para.innerHTML = 'Contenido que se carga al cargar todo el HTML...'
+    });
+    addEventListener("beforeunload", function (event) {
+        event.returnValue = "Se va a perder todo lo que hiciste!!"
+    });
+&lt;/script&gt;</code></pre></div></div></section><section data-id="91d8f1d3bd444ab058d8afa200f719c4"><div class="sl-block" data-block-type="code" data-block-id="fea90a3d104a82261b7c6097ff0a50d8" style="min-width: 30px; min-height: 30px; width: 570px; height: 576px; left: 195px; top: 89px;"><div class="sl-block-content" style="z-index: 11;"><pre><code>&lt;style&gt;
+  .progress {
+    border: 1px solid blue;
+    width: 100px;
+    position: fixed;
+    top: 10px; right: 10px;
+  }
+  .progress &gt; div {
+    height: 12px;
+    background: blue;
+    width: 0%;
+  }
+  body {
+    height: 2000px;
+  }
+&lt;/style&gt;
+&lt;div class="progress"&gt;
+    &lt;div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Scrolleame...&lt;/p&gt;
+&lt;script&gt;
+  var bar = document.querySelector(".progress div");
+  addEventListener("scroll", function() {
+    var max = document.body.scrollHeight - innerHeight;
+    var percent = (pageYOffset / max) * 100;
+    bar.style.width = percent + "%";
+  });
+&lt;/script&gt;</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 227px; left: 366px; top: 657px;" data-block-id="9ac5448cec3d142c065de6bfa0d7c1e5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-has-custom-html="">
+<p><a href="ejemplos/scroll.html" target="_blank">Ver Ejemplo</a></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 712px; left: 125px; top: 8px; height: auto;" data-block-id="98d2796883b2af7783aca5904bb01c2e"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 13; border-width: 1px;">
+<p>Al scrollear en nuestra ventana, el navegador dispara un evento llamado <em>scroll</em>.</p>
+</div></div></section><section data-id="4d8a92d6e98f009f3bdb238e3e384b76"><div class="sl-block" data-block-type="text" style="width: 712px; left: 125px; top: 93px; height: auto;" data-block-id="4778617e99a197c833aa1a2897301203"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 10; border-width: 1px;">
+<p>Un evento similar ocurre si intentamos cambiar las dimensiones de la ventana del navegador, cuando esto ocurre, se dispara el evento <em>resize</em>.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="dbd2ba9c721a55a96f01ff001fc71825" style="min-width: 30px; min-height: 30px; width: 617px; height: 256px; left: 172px; top: 263px;"><div class="sl-block-content" style="z-index: 11;"><pre><code>&lt;p id="estado"&gt;
+  Cambie el tamaño de la pantalla
+&lt;/p&gt;
+&lt;script&gt;
+  addEventListener("resize", function(event) {
+    var w = window.outerWidth;
+    var h = window.outerHeight;
+    var txt = "Tamaño de la pantalla: ancho=" + w + ", alto=" + h;
+    document.getElementById("estado").innerHTML = txt;
+  });
+&lt;/script&gt;</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 227px; left: 368px; top: 541px;" data-block-id="bca6dd84151e9c2f82ef6222ebe59e33"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-has-custom-html="">
+<p><a href="ejemplos/resize.html" target="_blank">Ver Ejemplo</a></p>
+</div></div></section><section data-id="d4e64a0ffc9202cacb16b60c78998422"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 0px; height: auto;" data-block-id="4174a78bce0b2e32140da6999d3a455b"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Eventos Customs</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 712px; left: 114px; top: 132px; height: auto;" data-block-id="82c8a8f1be3945c5e1d7330141d34e6c"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11; border-width: 1px;">
+<p>Se pueden crear nuevos eventos utilizando el constructor <em>Event</em>. </p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="ce0dc9bf91c3777f80717da880ebfdc1" style="min-width: 30px; min-height: 30px; width: 352px; height: 42px; left: 275px; top: 227px;"><div class="sl-block-content" style="z-index: 12;"><pre><code>var myEvent = new Event('message');</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="width: 712px; left: 114px; top: 280px; height: auto;" data-block-id="92b5dfa677bc296d7c48f1f58ea82462"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 13; border-width: 1px;">
+<p>Podemos escucharlos de la misma manera que al resto de los eventos.</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 512px; height: 42px; left: 208px; top: 367px;" data-block-id="bdd86502438f5fca09ad8e30164ac6ff"><div class="sl-block-content" style="z-index: 15;"><pre><code>addEventListener('message', function (event) { ... });</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="width: 712px; left: 114px; top: 420px; height: auto;" data-block-id="f86ddf8c42fd096fc119e26e56aeb895"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 16; border-width: 1px;">
+<p>Podemos disparar el evento utilizando el método dispatchEvent. </p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 272px; height: 42px; left: 315px; top: 507px;" data-block-id="8b00c23a60786d6e5bb2c024d612b519"><div class="sl-block-content" style="z-index: 17;"><pre><code>elem.dispatchEvent(myEvent);</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 227px; left: 338px; top: 600px;" data-block-id="aee7e7c0ba8b405da4f78c22f51735f9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18;" data-has-custom-html="">
+<p><a href="ejemplos/event.html" target="_blank">Ver Ejemplo</a></p>
+</div></div></section><section data-id="29b4bb533574cf2b8047e3a0604e77b4"><div class="sl-block" data-block-type="text" style="width: 712px; left: 107px; top: 85px; height: auto;" data-block-id="2f0d5a3cdc2bb8d7c8a2f38cf03d2578"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 10; border-width: 1px;">
+<p>Podemos modificar los atributos de nuestro evento utilizando el constructor CustomEvent</p>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 728px; height: 42px; left: 116px; top: 222px;" data-block-id="29d6c0e22cb188dda58decbbb167b332"><div class="sl-block-content" style="z-index: 11;"><pre><code>var myEvent = new CustomEvent('message', { 'detail': "Esto es un mensaje" });</code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 441px; height: 78px; left: 243px; top: 490px;" data-block-id="d93dcba1d0b0fb9d69fed2263a63646a"><div class="sl-block-content" style="z-index: 12;"><pre><code>addEventListener('message', function (event) {
+    console.log(event.detail)
+});</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="width: 712px; left: 124px; top: 334px; height: auto;" data-block-id="10630c1584254775ecabaa5d2d088c3b"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 13; border-width: 1px;">
+<p>Al hacer esto, cuando se dispare nuestro evento podemos obtener los atributos que nosotros definimos previamente.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 227px; left: 350px; top: 591px;" data-block-id="2c7432b07e982c4ec4bbaa4e7484a487"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;" data-has-custom-html="">
+<p><a href="ejemplos/customevent.html" target="_blank">Ver Ejemplo</a></p>
+</div></div></section>
+			</div>
+		</div>
+
+
+		<script src="../lib/js/head.min.js"></script>
+		<script src="../js/reveal.js"></script>
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				transition: 'slide',
+				center: true,
+				dependencies: [
+					{ src: '../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../plugin/zoom-js/zoom.js', async: true },
+					{ src: '../plugin/notes/notes.js', async: true }
+				]
+			});
+		</script>
+
+		
+
+	</body>
+</html>

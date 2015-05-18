@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> JS - EJ Remove Handler </title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<button>Funciono solo una vez</button>
+	</body>
+	<script>
+		var button = document.querySelector("button");
+		
+		function once() {
+			console.log("Listo.");
+			button.removeEventListener("click", once);
+		}
+
+		button.addEventListener("click", once);
+	</script>
+</html>

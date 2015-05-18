@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> JS - EJ Efecto Burbuja </title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<div>
+			<p>Apreta aqui, tengo efecto burbuja.</p>
+		</div>
+	</body>
+	<script>
+		var par = document.querySelector("p");
+		
+		var div = document.querySelector("div");
+  
+		par.addEventListener("click", function() {
+			console.log("Presionanste sobre el elemento p");
+		}, false);
+  
+		div.addEventListener("click", function() {
+			console.log("Presionanste sobre el elemento div");
+		}, false);
+	</script>
+</html>

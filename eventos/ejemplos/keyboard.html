@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> JS - EJ Keyboard </title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<p>El sitio se pondrá de color azul si se presiona la letra V.</p>
+	</body>
+	<script>
+		addEventListener("keydown", function(event) {
+			if (event.keyCode == 86)
+			document.body.style.background = "blue";
+		});
+  
+		addEventListener("keyup", function(event) {
+			if (event.keyCode == 86)
+				document.body.style.background = "";
+			});
+  
+		addEventListener("keypress", function(event) {
+			console.log(String.fromCharCode(event.charCode));
+		});
+	</script>
+</html>

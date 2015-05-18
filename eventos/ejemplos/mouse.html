@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> JS - EJ Mouse </title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<p>Usa el botón central o izquierdo!</p>
+		<button>Apretame</button>
+	</body>
+	<script>
+		var button = document.querySelector("button");
+
+		button.addEventListener("mouseup", function(event) {
+			console.log("Segundo ocurre el evento mouseup");
+		});
+		
+		button.addEventListener("mousedown", function(event) {
+			console.log("Primero ocurre el evento mousedown");
+		});
+
+		button.addEventListener("click", function(event) {
+			console.log("Y por ultimo ocurre el evento click");
+		});
+	</script>
+</html>

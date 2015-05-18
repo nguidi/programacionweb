@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> JS - EJ Mouse 5 </title>
+		<meta charset="UTF-8">
+		<style>
+			 div#padre {
+				padding-top: 50px;
+				border: 1px solid black;
+			}
+			div#azul {
+				height: 50px;
+				background-color: blue;
+			}
+			div#verde {
+				height: 50px;
+				background-color: green;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="padre">
+			<div id="azul"></div>
+			<div id="verde"></div>
+		</div>
+		<p id="estado"></p>
+	</body>
+	<script>
+		var div = document.getElementById("padre");
+		
+		div.addEventListener("mouseover", function(event) {
+			document.getElementById("estado").innerHTML = "Estoy dentro de "+event.target.id;
+		});
+  
+		div.addEventListener("mouseout", function(event) {
+			document.getElementById("estado").innerHTML = "";
+		});
+	</script>
+</html>

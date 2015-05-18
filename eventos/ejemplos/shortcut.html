@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> JS - EJ Atajos </title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<p>Presione Control + Space para continuar.</p>
+	</body>
+	<script>
+		addEventListener("keydown", function(event) {
+		
+		if (event.keyCode == 32 && event.ctrlKey)
+			console.log("Continuando!");
+		});
+	</script>
+</html>

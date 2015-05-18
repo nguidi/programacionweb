@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> JS - EJ Form 2 </title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<form>
+			Nombre: <input type="text">
+			<input type="reset">
+			<input type="submit">
+		</form>
+		<p id="estado"><p>
+	</body>
+	<script>
+		var input = document.querySelector("input");
+
+		var form = document.querySelector("form");
+		
+		form.addEventListener("submit", function(event) {
+			event.preventDefault()
+			document.getElementById("estado").innerHTML = "Formulario enviado...";
+		});
+
+		form.addEventListener("reset", function(event) {
+			document.getElementById("estado").innerHTML = "Formulario reseteado...";
+		});
+	</script>
+</html>

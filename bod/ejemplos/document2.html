@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> JS - EJ Document </title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<a name="1"> Link 1 </a>
+		<a name="2"> Link 2 </a>
+		<a name="3"> Link 3 </a>
+		<a> Link 4 </a>
+		<button> Mostrar Anchors </button>
+	</body>
+	<script>
+		/*
+			Ejemplo donde se busca mostar como cerrar una ventana.
+
+			La idea es utilizar un metodo definido sobre el BOD window.
+
+				window.close();
+
+		*/
+
+		//	Creamos una variable y le asignamos el boton con id crear
+    
+		var boton = document.querySelector("button");
+
+		boton.addEventListener("click", function(){
+
+			console.log(document.anchors);
+
+		});
+
+		
+
+	</script>
+</html>

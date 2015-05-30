@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> JS - EJ Window Close </title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<button id="crear"> Abrir Google AR</button>
+		<button id="cerrar"> Cerrar a Google</button>
+	</body>
+	<script>
+		/*
+			Ejemplo donde se busca mostar como cerrar una ventana.
+
+			La idea es utilizar un metodo definido sobre el BOD window.
+
+				window.close();
+
+		*/
+
+		//	Creamos una variable y le asignamos el boton con id crear
+		var boton = document.querySelector("#crear");
+
+		//	Creamos una variable y le asignamos el boton con id cerrar
+		var botonCerrar = document.querySelector("#cerrar");
+
+		//	Creamos una variable sin inicializar
+		var nuevaVenta;
+
+		//	Escuchamos que se haga click sobre el boton
+		boton.addEventListener("click", function(){
+
+			//	Abrimos la nueva ventana y en ella mostramos Google AR
+			nuevaVenta = window.open("wwww.google.com.ar");
+		
+		});
+
+		botonCerrar.addEventListener("click", function(){
+			
+			//	Cierro la ventana
+			nuevaVenta.close();
+		
+		});
+
+	</script>
+</html>
+

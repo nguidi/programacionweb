@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> JS - EJ Tabs 2 </title>
+		<meta charset="UTF-8">
+		<style type="text/css">
+			ul {
+				list-style: none;
+			}
+
+			ul li {
+				float: left;
+				margin-right: 20px;
+			}
+
+			ul li a {
+				text-decoration: none;
+				color: blue;
+			}
+
+			ul li a.activo {
+				color: red;
+			}
+
+			.contenidos p {
+				display: none;
+			}
+
+			.contenidos p.activo {
+				display: block;
+			}
+
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>
+				<a class="link activo" href="#uno">
+					Uno
+				</a>
+			</li>
+			<li>
+				<a class="link" href="#dos">
+					Dos
+				</a>
+			</li>
+			<li>
+				<a class="link" href="#tres">
+					Tres
+				</a>
+			</li>
+		</ul>
+		<div class="contenidos">
+			<p class="contenido activo" id="uno">
+				Hola Contenido del Uno
+			</p>
+			<p class="contenido" id="dos">
+				Hola Contenido del Dos
+			</p>
+			<p class="contenido" id="tres">
+				Hola Contenido del Tres
+			</p>
+		</div>
+	</body>
+	<script>
+
+		var	links = document.querySelectorAll(".link");
+
+		console.log(links);
+
+		for (var i=0; i< links.length; i++) {
+
+			links[i].addEventListener("click", function(ev) {
+
+				var iDdelParrafoAMostrar = ev.target.getAttribute("href");
+			
+				var parrafoAMostrar = document.querySelector(iDdelParrafoAMostrar);
+
+				var parrafoVisible = document.querySelector("p.activo");
+
+				var	linkActivo = document.querySelector("a.activo");
+
+				linkActivo.setAttribute("class","link");
+
+				ev.target.setAttribute("class","link activo");
+
+				parrafoVisible.setAttribute("class","contenido");
+
+				parrafoAMostrar.setAttribute("class","contenido activo");
+
+			});
+			
+		}
+
+	</script>
+</html>

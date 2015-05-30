@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> JS - EJ Call Y Apply </title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+	</body>
+	<script>
+		/*
+			Ejemplo donde se busca mostar como cerrar una ventana.
+
+			La idea es utilizar un metodo definido sobre el BOD window.
+
+				window.close();
+
+		*/
+
+		//	Creamos una variable y le asignamos el boton con id crear
+    
+		function puntuar(x) {
+			return this.puntaje + x;
+		}
+
+		var pelicula = new Object();
+		pelicula.puntaje = 5;
+
+		console.log(puntuar.call(pelicula, 10));
+
+		console.log(puntuar.apply(pelicula, [10]));
+
+
+	</script>
+</html>
+
+

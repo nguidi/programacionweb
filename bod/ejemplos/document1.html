@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> JS - EJ Document </title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<button> Mostrar Info </button>
+	</body>
+	<script>
+		/*
+			Ejemplo donde se busca mostar como cerrar una ventana.
+
+			La idea es utilizar un metodo definido sobre el BOD window.
+
+				window.close();
+
+		*/
+
+		//	Creamos una variable y le asignamos el boton con id crear
+    
+		var boton = document.querySelector("button");
+
+		boton.addEventListener("click", function(){
+
+			console.log(document.title);
+			document.title = "Ejemplo del document";
+			console.log(document.title);
+			console.log(document.URL);
+			console.log(document.referrer)
+			console.log(document.lastModified);
+
+		});
+
+	</script>
+</html>
+
+

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> JS - EJ Tabs </title>
+		<meta charset="UTF-8">
+		<style type="text/css">
+			ul {
+				list-style: none;
+			}
+
+			ul li {
+				float: left;
+				margin-right: 20px;
+			}
+
+			ul li a {
+				text-decoration: none;
+				color: blue;
+			}
+
+			ul li a.activo {
+				color: red;
+			}
+
+			.contenidos p {
+				display: none;
+			}
+
+			.contenidos p.activo {
+				display: block;
+			}
+
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>
+				<a class="link-uno activo" href="#">
+					Uno
+				</a>
+			</li>
+			<li>
+				<a class="link-dos" href="#">
+					Dos
+				</a>
+			</li>
+			<li>
+				<a class="link-tres" href="#">
+					Tres
+				</a>
+			</li>
+		</ul>
+		<div class="contenidos">
+			<p class="contenido-uno activo">
+				Hola Contenido del Uno
+			</p>
+			<p class="contenido-dos">
+				Hola Contenido del Dos
+			</p>
+			<p class="contenido-tres">
+				Hola Contenido del Tres
+			</p>
+		</div>
+	</body>
+	<script>
+
+		var linkUno = document.querySelector(".link-uno");
+		var linkDos = document.querySelector(".link-dos");
+		var linkTres = document.querySelector(".link-tres");
+		
+		var pUno = document.querySelector(".contenido-uno");
+		var pDos = document.querySelector(".contenido-dos");
+		var pTres = document.querySelector(".contenido-tres");
+
+		linkUno.addEventListener("click", function() {
+
+			linkUno.setAttribute("class","link-uno activo");
+			linkDos.setAttribute("class","link-dos");
+			linkTres.setAttribute("class","link-tres");
+
+			pUno.setAttribute("class","contenido-uno activo");
+			pDos.setAttribute("class","contenido-dos");
+			pTres.setAttribute("class","contenido-tres");
+		
+		})
+
+		linkDos.addEventListener("click", function() {
+
+			linkUno.setAttribute("class","link-uno");
+			linkDos.setAttribute("class","link-dos activo");
+			linkTres.setAttribute("class","link-tres");
+
+			pUno.setAttribute("class","contenido-uno");
+			pDos.setAttribute("class","contenido-dos activo");
+			pTres.setAttribute("class","contenido-tres");
+		
+		})
+
+		linkTres.addEventListener("click", function() {
+
+			linkUno.setAttribute("class","link-uno");
+			linkDos.setAttribute("class","link-dos");
+			linkTres.setAttribute("class","link-tres activo");
+			
+			pUno.setAttribute("class","contenido-uno");
+			pDos.setAttribute("class","contenido-dos");
+			pTres.setAttribute("class","contenido-tres activo");
+		
+		})
+	</script>
+</html>

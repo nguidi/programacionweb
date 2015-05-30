@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> JS - EJ Window Open </title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<button id="google"> Abrir Google AR</button>
+	</body>
+	<script>
+		/*
+			Ejemplo donde se busca mostar como crear una nueva ventana.
+
+			La idea es utilizar un metodo definido sobre el BOD window.
+
+				window.open(URL);
+
+			Donde la URL sera el sitio a mostrar en la nueva ventana. Si
+			este argumento no es pasado, se creara una ventana vacia.
+		*/
+
+		//	Creamos una variable llamada boton y le asignamos el boton
+		var boton = document.querySelector("#google");
+
+		//	Escuchamos que se haga click sobre el boton
+		boton.addEventListener("click", function(){
+
+			//	Abrimos la nueva ventana y en ella mostramos Google AR
+			window.open("wwww.google.com.ar");
+		
+		});
+
+	</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> JS - EJ Clases </title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+	</body>
+	<script>
+		/*
+			Ejemplo donde se busca mostar como cerrar una ventana.
+
+			La idea es utilizar un metodo definido sobre el BOD window.
+
+				window.close();
+
+		*/
+
+		//	Creamos una variable y le asignamos el boton con id crear
+    
+		function Persona(nombre,apellido) {
+		    this.nombre = nombre;
+		    this.apellido = apellido;
+		}
+
+		Persona.prototype.nombreCompleto = function() {
+		    return this.nombre + " " + this.apellido;
+		}
+
+		var tutor = new Persona("Neri", "Güidi");
+
+		console.log(tutor);
+
+		console.log(tutor.nombre);
+
+		console.log(tutor.nombreCompleto());
+
+	</script>
+</html>
+
+

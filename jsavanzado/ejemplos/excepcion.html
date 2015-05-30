@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> JS - EJ Excepcion </title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+	</body>
+	<script>
+		/*
+			Ejemplo donde se busca mostar como cerrar una ventana.
+
+			La idea es utilizar un metodo definido sobre el BOD window.
+
+				window.close();
+
+		*/
+
+		//	Creamos una variable y le asignamos el boton con id crear
+    		
+		function obtenerNumero() {
+			return "HOLA"
+		}
+
+		var numeroIngresado = obtenerNumero();
+
+		try {
+			
+			var total = 1000 / Integer.parseInt(numeroIngresado);
+		
+		} catch(errorOcurrido) {
+			
+			console.log(errorOcurrido);
+			var total = 1000;
+		
+		} finally {
+		
+			console.log("TOTAL: ", total);
+		
+		}
+
+
+	</script>
+</html>
+
+

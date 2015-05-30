@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> JS - EJ Window MoveBy </title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<button id="crear"> Abrir Google AR</button>
+		<button id="mover"> Mover a Google</button>
+	</body>
+	<script>
+		/*
+			Ejemplo donde se busca mostar como cerrar una ventana.
+
+			La idea es utilizar un metodo definido sobre el BOD window.
+
+				window.close();
+
+		*/
+
+		//	Creamos una variable y le asignamos el boton con id crear
+		var boton = document.querySelector("#crear");
+
+		//	Creamos una variable y le asignamos el boton con id cerrar
+		var botonMover = document.querySelector("#mover");
+
+		//	Creamos una variable sin inicializar
+		var nuevaVentana;
+
+		//	Escuchamos que se haga click sobre el boton
+		boton.addEventListener("click", function(){
+
+			//	Abrimos la nueva ventana y en ella mostramos Google AR
+			nuevaVentana = window.open("","","width=150px, height=150px");
+			nuevaVentana.document.body.innerHTML = "<p> Hola Mundo!</p>";
+		
+		});
+
+		botonMover.addEventListener("click", function(){
+			
+			//	Muevo la ventana 150px a la derecha y 150 hacia abajo.
+			nuevaVentana.moveBy(15,15);
+		
+		});
+
+	</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> JS - EJ Location </title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<button> Cambiar a Google </button>
+	</body>
+	<script>
+		/*
+			Ejemplo donde se busca mostar como cerrar una ventana.
+
+			La idea es utilizar un metodo definido sobre el BOD window.
+
+				window.close();
+
+		*/
+
+		//	Creamos una variable y le asignamos el boton con id crear
+    
+		var boton = document.querySelector("button");
+
+		boton.addEventListener("click", function(){
+
+			location.replace("www.google.com.ar");
+
+		});
+
+	</script>
+</html>
+
+
